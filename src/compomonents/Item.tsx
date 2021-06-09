@@ -37,6 +37,7 @@ const Item: FC<Props> = ({
                 -
               </button>
             </div>
+            <h3>{amount}</h3>
             <div className="btn-container">
               <button
                 onClick={() => changeAmountOfItemInList(id, "INC")}
