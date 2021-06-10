@@ -13,7 +13,18 @@ const App: FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    setItems(data);
+    if (searchTerm === "") setItems(data);
+    else {
+      const filteredItems: ItemData[] = data.filter((item: ItemData) => {
+        return item.title.toLowerCase().match(searchTerm.toLowerCase());
+      });
+      setItems(filteredItems);
+    }
+  }, [searchTerm]);
+
+  useEffect(() => {
+    // setItems(data);
+    setItems(data.slice(0, 6));
     setCart([data[0]]);
   }, []);
 
@@ -24,16 +35,6 @@ const App: FC = (): JSX.Element => {
     );
     setTotalCost(cost);
   }, [cart]);
-
-  useEffect(() => {
-    if (searchTerm === "") setItems(data);
-    else {
-      const filteredItems: ItemData[] = data.filter((item: ItemData) => {
-        return item.title.toLowerCase().match(searchTerm.toLowerCase());
-      });
-      setItems(filteredItems);
-    }
-  }, [searchTerm]);
 
   const changeAmountOfItemInList = (id: number, op: string): void => {
     const index: number = _getItemIndexFromItems(id);
@@ -104,9 +105,8 @@ const App: FC = (): JSX.Element => {
 
   return (
     <div className="App">
-      {/* <PracticeTs></PracticeTs> */}
+      <PracticeTs></PracticeTs>
       <div className="hero">
-        {/* <button onClick={() => setItems(data.slice(0, 3))}>Slice</button> */}
         <SearchBar setSearchTerm={setSearchTerm} />
         <ItemList
           items={items}

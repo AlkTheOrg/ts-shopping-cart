@@ -80,7 +80,7 @@ body {
   margin-left: 70px;
 }
 
-.Cart {
+.Cart-inside {
   /* background-color: green; */
   background-color: rgba(182, 222, 255, 0.425);
   border: 1px solid rgba(0, 0, 0, 0.205);
@@ -162,14 +162,22 @@ body {
   display: flex;
   justify-content: center;
   padding: 15px;
-  background-color: rgb(110, 10, 110, .2);
+  background-color: rgba(110, 10, 110, .1);
+  height: 100%;
+
 }
 
 .item {
   /* background-color: #fc9d5e; */
   border: 2px solid var(--independence);
   border-radius: 5%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* position: relative; */
+}
+
+.item-body {
+  height: 100%;
+  background-color: red;
 }
 
 .item a {
