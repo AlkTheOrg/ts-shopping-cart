@@ -105,7 +105,7 @@ const App: FC = (): JSX.Element => {
 
   return (
     <div className="App">
-      <PracticeTs></PracticeTs>
+      {/* <PracticeTs></PracticeTs> */}
       <div className="hero">
         <SearchBar setSearchTerm={setSearchTerm} />
         <ItemList
