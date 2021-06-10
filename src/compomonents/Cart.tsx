@@ -24,18 +24,21 @@ const Cart: FC<Props> = ({
 }): JSX.Element => {
   return (
     <aside className="Cart">
-      <h1>Cart</h1>
-      {cart.map((item: ItemData) => {
-        return (
-          <CartItem
-            {...item}
-            subtractFromCard={subtractFromCard}
-            increaseInCard={increaseInCard}
-          />
-        );
-      })}
-      <h2 className="total-cost">{totalCost} TL</h2>
-      <button className="proceed">PROCEED</button>
+      <div className="Cart-inside">
+        <h1>Cart</h1>
+        {cart.map((item: ItemData) => {
+          return (
+            <CartItem
+              key={item.id}
+              {...item}
+              subtractFromCard={subtractFromCard}
+              increaseInCard={increaseInCard}
+            />
+          );
+        })}
+        <h2 className="total-cost">{totalCost} TL</h2>
+        <button className="proceed">PROCEED</button>
+      </div>
     </aside>
   );
 };
