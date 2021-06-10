@@ -162,7 +162,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 15px;
-  background-color: white;
+  background-color: rgb(110, 10, 110, .2);
 }
 
 .item {
