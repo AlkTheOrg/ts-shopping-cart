@@ -1,6 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
 import "./App.css";
-import PracticeTs from "./PracticeTs";
 import ItemList from "./compomonents/ItemList";
 import data, { ItemData } from "./data";
 import Cart from "./compomonents/Cart";
@@ -105,7 +104,6 @@ const App: FC = (): JSX.Element => {
 
   return (
     <div className="App">
-      {/* <PracticeTs></PracticeTs> */}
       <div className="hero">
         <SearchBar setSearchTerm={setSearchTerm} />
         <ItemList
