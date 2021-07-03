@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
   id: number;
@@ -22,10 +23,10 @@ const Item: FC<Props> = ({
   return (
     <div className="item-wrapper">
       <div className="item">
-        <a href={`/item/${id}`}>
+        <Link to={`/item/${id}`}>
           <h1>{title}</h1>
           <img src={img1} alt="item" className="item-img" />
-        </a>
+        </Link>
         <div className="item-body">
           <h2>{price}</h2>
           <div className="amount-wrapper">

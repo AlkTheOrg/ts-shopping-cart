@@ -13,8 +13,8 @@ const Router: FC = () => {
         <Navbar />
         <Switch>
           <Route exact path="/" component={App} />
-          <Route path="/about" component={About} />
-          <Route path="/item/id" component={ItemShow} />
+          <Route exact path="/about" component={About} />
+          <Route path="/item/:id" component={ItemShow} />
           <Route path="*" component={Error} />
         </Switch>
       </BrowserRouter>

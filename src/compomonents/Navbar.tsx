@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div>
-      <h1>THIS IS A NAVBAR</h1>
-    </div>
+    <Link to="/">
+      <div>
+        <h1>THIS IS A NAVBAR</h1>
+      </div>
+    </Link>
   );
 }
 
