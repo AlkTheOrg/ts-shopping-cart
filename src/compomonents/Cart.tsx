@@ -1,7 +1,7 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { connect, useDispatch } from "react-redux";
 import { ItemData } from "../data";
-import { ItemListState, RootState } from "../redux/constants/type";
+import { RootState } from "../redux/constants/type";
 import CartItem from "./CartItem";
 import * as Actions from "../redux/actions/index";
 

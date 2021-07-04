@@ -12,6 +12,7 @@ interface Props {
 const ItemList: FC<Props> = ({ items }) => {
   useEffect(() => {
     dispatch(Actions.addToCart(items[0]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const dispatch = useDispatch();

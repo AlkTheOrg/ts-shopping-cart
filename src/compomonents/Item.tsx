@@ -1,6 +1,5 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
-import { ItemData } from "../data";
 import { ItemListAction } from "../redux/constants/type";
 
 interface Props {
