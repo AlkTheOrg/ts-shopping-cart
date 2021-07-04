@@ -343,6 +343,7 @@ button {
 .cart-item h3 {
   padding: 2px 12px;
   font-size: 18px;
+  margin-bottom: 6px;
 }
 
 .cart-item-hero h4 {
