@@ -12,12 +12,12 @@ export interface ItemData {
 const data: ItemData[] = [
   {
     id: 1,
-    title: `Asus X515JA-BR070T Intel Core i3-1005G 256 SSD 15.6" HD Win10 Notebook`,
-    price: 5189,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125036008/125036008_0_MC/50216576.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125036008/125036008_1_MC/50216577.jpg",
-    img3: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125036008/125036008_3_MC/47591469.png",
-    img4: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125036008/125036008_5_MC/47591470.png",
+    title: `Lenovo Thinkbook 14 Intel Core I5 1135G7 24GB 1tb SSD MX450 Freedos 14" Fhd Taşınabilir Bilgisayar`,
+    price: 9386,
+    img1: "https://productimages.hepsiburada.net/s/94/550/110000037364540.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/94/550/110000037364541.jpg/format:webp",
+    img3: "https://productimages.hepsiburada.net/s/94/550/110000037364542.jpg/format:webp",
+    img4: "https://productimages.hepsiburada.net/s/94/550/110000037364543.jpg/format:webp",
     amount: 1,
   },
   {
