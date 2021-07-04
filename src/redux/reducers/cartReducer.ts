@@ -33,6 +33,10 @@ const cartReducer = (
           { ...state[index], amount: state[index].amount - 1 },
           ...state.slice(index + 1),
         ];
+    case Constants.DEL_FROM_CART:
+      index = findItemIndexById(item.id, state);
+      if (index === -1) return state;
+      else return [...state.slice(0, index), ...state.slice(index + 1)];
     default:
       return state;
   }

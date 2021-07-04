@@ -32,6 +32,8 @@ const Cart: FC<Props> = ({ cart }): JSX.Element => {
     dispatch(Actions.increaseInCart(item));
   const decreaseInCart = (item: ItemData) =>
     dispatch(Actions.decreaseInCart(item));
+  const deleteFromCart = (item: ItemData) =>
+    dispatch(Actions.delFromCart(item));
   return (
     <aside className="Cart">
       <div className="Cart-inside">
@@ -43,6 +45,7 @@ const Cart: FC<Props> = ({ cart }): JSX.Element => {
               {...item}
               decreaseInCart={() => decreaseInCart(item)}
               increaseInCart={() => increaseInCart(item)}
+              deleteFromCart={() => deleteFromCart(item)}
             />
           );
         })}
