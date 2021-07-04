@@ -1,12 +1,12 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
+import { connect, useDispatch } from "react-redux";
 import { ItemData } from "../data";
+import { ItemListState, RootState } from "../redux/constants/type";
 import CartItem from "./CartItem";
+import * as Actions from "../redux/actions/index";
 
 interface Props {
   cart: ItemData[];
-  totalCost: number;
-  subtractFromCard: (id: number) => void;
-  increaseInCard: (id: number) => void;
 }
 
 // function Cart2(): JSX.Element {
@@ -16,12 +16,22 @@ interface Props {
 /* Without FC<Props> Cart is an anynmous function
 that returns JSX.Element. Now it s an FC<Props> element.
 */
-const Cart: FC<Props> = ({
-  cart,
-  totalCost,
-  subtractFromCard,
-  increaseInCard,
-}): JSX.Element => {
+const Cart: FC<Props> = ({ cart }): JSX.Element => {
+  const [totalCost, setTotalCost] = useState(0);
+
+  useEffect(() => {
+    const cost: number = cart.reduce(
+      (sum: number, item: ItemData) => sum + item.price * item.amount,
+      0
+    );
+    setTotalCost(cost);
+  }, [cart]);
+
+  const dispatch = useDispatch();
+  const increaseInCart = (item: ItemData) =>
+    dispatch(Actions.increaseInCart(item));
+  const decreaseInCart = (item: ItemData) =>
+    dispatch(Actions.decreaseInCart(item));
   return (
     <aside className="Cart">
       <div className="Cart-inside">
@@ -31,8 +41,8 @@ const Cart: FC<Props> = ({
             <CartItem
               key={item.id}
               {...item}
-              subtractFromCard={subtractFromCard}
-              increaseInCard={increaseInCard}
+              decreaseInCart={() => decreaseInCart(item)}
+              increaseInCart={() => increaseInCart(item)}
             />
           );
         })}
@@ -43,4 +53,8 @@ const Cart: FC<Props> = ({
   );
 };
 
-export default Cart;
+const mapStateToProps = (state: RootState) => ({
+  cart: state.cart,
+});
+
+export default connect(mapStateToProps)(Cart);

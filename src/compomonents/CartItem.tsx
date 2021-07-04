@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { ItemListAction } from "../redux/constants/type";
 
 interface Props {
   id: number;
@@ -6,8 +7,8 @@ interface Props {
   price: number;
   img1: string;
   amount: number;
-  subtractFromCard: (id: number) => void;
-  increaseInCard: (id: number) => void;
+  decreaseInCart: () => ItemListAction;
+  increaseInCart: () => ItemListAction;
 }
 
 const CartItem: FC<Props> = ({
@@ -16,8 +17,8 @@ const CartItem: FC<Props> = ({
   price,
   img1,
   amount,
-  subtractFromCard,
-  increaseInCard,
+  decreaseInCart,
+  increaseInCart: increaseInCard,
 }): JSX.Element => {
   return (
     <div className="cart-item">
@@ -27,14 +28,14 @@ const CartItem: FC<Props> = ({
         <div className="cart-item-hero">
           <div className="cart-item-amount">
             <button
-              onClick={() => subtractFromCard(id)}
+              onClick={() => decreaseInCart()}
               className="dec-item-amount"
             >
               -
             </button>
             <p>{amount}</p>
             <button
-              onClick={() => increaseInCard(id)}
+              onClick={() => increaseInCard()}
               className="inc-item-amount"
             >
               +

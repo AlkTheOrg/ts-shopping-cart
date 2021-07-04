@@ -1,7 +1,6 @@
 import Constants from "../constants";
 import { ItemListAction, ItemListState } from "../constants/type";
 import { findItemIndexById } from "./itemsReducer";
-import { ItemData } from "../../data";
 
 const cartReducer = (
   state: ItemListState = [],
@@ -12,12 +11,12 @@ const cartReducer = (
   switch (action.type) {
     case Constants.ADD_TO_CART:
       index = findItemIndexById(item.id, state);
-      if (index !== -1) return [...state, item];
+      if (index === -1) return [...state, item];
       else
         return [
           ...state.slice(0, index),
           { ...state[index], amount: state[index].amount + item.amount },
-          ...state.slice(index),
+          ...state.slice(index + 1),
         ];
     case Constants.INCREASE_IN_CART:
       return state.map((cItem) =>
