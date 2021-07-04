@@ -16,11 +16,22 @@ const ItemShow: React.FC = () => {
 
   const { id: itemId, title, price, amount } = { ...item };
 
+  const shiftLeft = () => {
+    setImages([...images.slice(1), images[0]]);
+  };
+
+  const shiftRight = () => {
+    setImages([
+      images[images.length - 1],
+      ...images.slice(0, images.length - 1),
+    ]);
+  };
+
   return (
     <div className="item-show-wrapper">
       <div className="item-show">
-        <h2>{title}</h2>
         <div className="item-image-container">
+          <h2>{title}</h2>
           <img className="img-at-center" src={images[0]} alt={title + 1} />
           {images[2] ? (
             <img className="img-at-right" src={images[1]} alt={title + 2} />
@@ -31,12 +42,43 @@ const ItemShow: React.FC = () => {
           {images[4] ? (
             <img className="img-at-left" src={images[3]} alt={title + 4} />
           ) : null}
-          <button onClick={() => console.log("TODO")} className="shift-left">
+          <button onClick={shiftLeft} className="shift-left">
             &#60;
           </button>
-          <button onClick={() => console.log("TODO")} className="shift-right">
+          <button onClick={shiftRight} className="shift-right">
             &#62;
           </button>
+        </div>
+        <div className="item-hero">
+          <h2>
+            {price} <i>TL</i>
+          </h2>
+          <div className="amount-wrapper">
+            <div className="amount">
+              <div className="btn-container">
+                <button
+                  onClick={() => console.log("todo")}
+                  className="decrement"
+                >
+                  TO
+                </button>
+              </div>
+              <h3>{amount}</h3>
+              <div className="btn-container">
+                <button
+                  onClick={() => console.log("todo")}
+                  className="increment"
+                >
+                  DO
+                </button>
+              </div>
+              <div className="btn-container">
+                <button onClick={() => console.log("todo")} className="add-btn">
+                  Later
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
