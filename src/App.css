@@ -457,6 +457,60 @@ button {
   margin-right: 18px;
 }
 
+/*******
+MAIN NAVBAR
+*******/
+.main-nav {
+  /* background-color: var(--cultured); */
+  height: 56px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  list-style: none;
+  height: 100%;
+}
+
+.react-nav-links {
+  display: flex;
+}
+
+.react-nav-link {
+  font-size: 24px;
+  margin-left: 34px;
+}
+
+.react-nav-link a:hover {
+  color: var(--apricot-darker);
+}
+
+.react-nav-link a {
+  color: var(--independence);
+  text-decoration: none;
+}
+
+#github {
+  margin-right: 14px;
+}
+
+#github img {
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+}
+
+#github img:hover {
+  border: 1px solid var(--independence);
+  border-radius: 50%;
+}
+/*******
+Media Queries
+*******/
+
 @media only screen and (max-width: 1290px) {
   .items-list li {
     list-style: none;
