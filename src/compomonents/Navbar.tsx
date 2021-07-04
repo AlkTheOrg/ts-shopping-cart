@@ -14,7 +14,7 @@ function Navbar() {
           </li>
         </div>
         <li className="nav-list-elem">
-          <a id="github" href="github.com/AlkTheOrg">
+          <a id="github" href="errroooor">
             <img
               src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
               alt=""
