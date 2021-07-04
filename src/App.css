@@ -430,6 +430,8 @@ button {
   transform: translateY(-55%);
   transition: 0.5s;
   height: 65%;
+  border: 12px solid #97c1df88;
+  border-radius: 5px;
 }
 
 .img-at-center {
