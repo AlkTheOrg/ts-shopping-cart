@@ -9,7 +9,9 @@ const ItemShow: React.FC = () => {
   const { id } = useParams<Param>();
   const item = data.find((i) => i.id.toString() === id);
   const [images, setImages] = React.useState<string[]>(
-    item ? [item.img1, item.img2, item.img3, item.img4] : []
+    item
+      ? [item.img1, item.img2, item.img3, item.img4].filter((img) => img !== "")
+      : []
   );
 
   if (!item) return <h1>Item not Found</h1>;
