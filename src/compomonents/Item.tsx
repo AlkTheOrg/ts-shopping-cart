@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
+import { ItemData } from "../data";
+import { ItemListAction } from "../redux/constants/type";
 
 interface Props {
   id: number;
@@ -7,8 +9,9 @@ interface Props {
   price: number;
   img1: string;
   amount: number;
-  addToCart: (id: number) => void;
-  changeAmountOfItemInList: (id: number, op: string) => void;
+  addToCart: () => ItemListAction;
+  increase: () => ItemListAction;
+  decrease: () => ItemListAction;
 }
 
 const Item: FC<Props> = ({
@@ -18,7 +21,8 @@ const Item: FC<Props> = ({
   img1,
   amount,
   addToCart,
-  changeAmountOfItemInList,
+  increase,
+  decrease,
 }): JSX.Element => {
   return (
     <div className="item-wrapper">
@@ -32,24 +36,18 @@ const Item: FC<Props> = ({
           <div className="amount-wrapper">
             <div className="amount">
               <div className="btn-container">
-                <button
-                  onClick={() => changeAmountOfItemInList(id, "DEC")}
-                  className="decrement"
-                >
+                <button onClick={() => decrease()} className="decrement">
                   -
                 </button>
               </div>
               <h3>{amount}</h3>
               <div className="btn-container">
-                <button
-                  onClick={() => changeAmountOfItemInList(id, "INC")}
-                  className="increment"
-                >
+                <button onClick={() => increase()} className="increment">
                   +
                 </button>
               </div>
               <div className="btn-container">
-                <button onClick={() => addToCart(id)} className="add-btn">
+                <button onClick={() => addToCart()} className="add-btn">
                   Add
                 </button>
               </div>

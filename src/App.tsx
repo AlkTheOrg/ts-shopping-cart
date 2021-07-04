@@ -35,39 +35,6 @@ const App: FC = (): JSX.Element => {
     setTotalCost(cost);
   }, [cart]);
 
-  const changeAmountOfItemInList = (id: number, op: string): void => {
-    const index: number = _getItemIndexFromItems(id);
-    if (index !== -1) {
-      const newItems: ItemData[] = [...items];
-      const newItem: ItemData = { ...items[index] };
-      if (op === "INC") newItem.amount++;
-      else if (newItem.amount > 1) newItem.amount--;
-      newItems[index] = newItem;
-      setItems(newItems);
-    }
-  };
-
-  const addToCart = (id: number): void => {
-    const index: number = _getItemIndexFromCart(id);
-    if (index !== -1) {
-      const newCart: ItemData[] = [...cart];
-      let updatedItem: ItemData = { ...newCart[index] };
-      updatedItem.amount += items[_getItemIndexFromItems(id)].amount;
-      // updatedItem.amount += items.find(
-      //   (item: ItemData) => item.id === id
-      // ).amount;
-      newCart[index] = updatedItem;
-      setCart(newCart);
-    } else {
-      // const find = (items: ItemData[]) => {
-      //   return { ...items.find((item) => item.id === id) };
-      // };
-      // const item: ItemData = find(items);
-      const item: ItemData = { ...items[_getItemIndexFromItems(id)] };
-      setCart([...cart, item]);
-    }
-  };
-
   const subtractFromCard = (id: number): void => {
     const index: number = _getItemIndexFromCart(id);
     if (cart[index].amount === 1) {
@@ -98,19 +65,11 @@ const App: FC = (): JSX.Element => {
     return cart.findIndex((item: ItemData) => item.id === id);
   };
 
-  const _getItemIndexFromItems = (id: number): number => {
-    return items.findIndex((item: ItemData) => item.id === id);
-  };
-
   return (
     <div className="App">
       <div className="hero">
         <SearchBar setSearchTerm={setSearchTerm} />
-        <ItemList
-          items={items}
-          addToCart={addToCart}
-          changeAmountOfItemInList={changeAmountOfItemInList}
-        />
+        <ItemList />
       </div>
       <Cart
         cart={cart}
