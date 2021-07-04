@@ -31,7 +31,9 @@ const Item: FC<Props> = ({
           <img src={img1} alt="item" className="item-img blend-white-bg-img " />
         </Link>
         <div className="item-body">
-          <h2>{price}</h2>
+          <h2>
+            {price} <i>TL</i>
+          </h2>
           <div className="amount-wrapper">
             <div className="amount">
               <div className="btn-container">

@@ -46,7 +46,9 @@ const CartItem: FC<Props> = ({
               +
             </button>
           </div>
-          <h4>{price * amount} TL</h4>
+          <h4>
+            {price * amount} <i>TL</i>
+          </h4>
         </div>
       </div>
     </div>
