@@ -1,11 +1,12 @@
 import React, { FC, FormEvent, useEffect, useRef } from "react";
+import { connect, useDispatch } from "react-redux";
+import { setSearchTerm } from "../redux/actions";
 
-interface Props {
-  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
-}
+interface Props {}
 
-const SearchBar: FC<Props> = ({ setSearchTerm }): JSX.Element => {
+const SearchBar: FC<Props> = (): JSX.Element => {
   const searchInput = useRef<HTMLInputElement>(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (searchInput && searchInput.current) searchInput.current.focus();
@@ -13,7 +14,7 @@ const SearchBar: FC<Props> = ({ setSearchTerm }): JSX.Element => {
 
   const searchItem = (): void => {
     const value = searchInput.current?.value;
-    if (value !== undefined) setSearchTerm(value);
+    if (value !== undefined) dispatch(setSearchTerm(value));
   };
 
   return (
@@ -32,4 +33,4 @@ const SearchBar: FC<Props> = ({ setSearchTerm }): JSX.Element => {
   );
 };
 
-export default SearchBar;
+export default connect()(SearchBar);

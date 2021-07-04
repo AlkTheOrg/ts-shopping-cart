@@ -34,3 +34,8 @@ export const decreaseInCart = (item: ItemData) => ({
   type: Constants.DECREASE_IN_CART,
   payload: item,
 });
+
+export const setSearchTerm = (term: string) => ({
+  type: Constants.SET_SEARCH_TERM,
+  payload: term,
+});

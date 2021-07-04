@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC, useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { ItemData } from "../data";
 import { RootState } from "../redux/constants/type";
@@ -10,6 +10,10 @@ interface Props {
 }
 
 const ItemList: FC<Props> = ({ items }) => {
+  useEffect(() => {
+    dispatch(Actions.addToCart(items[0]));
+  }, []);
+
   const dispatch = useDispatch();
   const addToCart = (item: ItemData) => dispatch(Actions.addToCart(item));
   const increase = (item: ItemData) => dispatch(Actions.increaseInList(item));
@@ -33,7 +37,12 @@ const ItemList: FC<Props> = ({ items }) => {
 };
 
 const mapStateToProps = (state: RootState) => ({
-  items: state.items,
+  items: filterItemsBySearchTerm(state.items, state.searchFilter),
 });
+
+const filterItemsBySearchTerm = (items: ItemData[], term: string) =>
+  items.filter((item) =>
+    item.title.toLowerCase().includes(term.trim().toLowerCase())
+  );
 
 export default connect(mapStateToProps)(ItemList);

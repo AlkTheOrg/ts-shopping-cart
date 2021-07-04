@@ -28,8 +28,8 @@ const Item: FC<Props> = ({
     <div className="item-wrapper">
       <div className="item">
         <Link to={`/item/${id}`}>
-          <h1>{title}</h1>
-          <img src={img1} alt="item" className="item-img" />
+          <h1>{title.length >= 50 ? `${title.slice(0, 50)}...` : title}</h1>
+          <img src={img1} alt="item" className="item-img blend-white-bg-img " />
         </Link>
         <div className="item-body">
           <h2>{price}</h2>

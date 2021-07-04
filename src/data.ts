@@ -22,60 +22,58 @@ const data: ItemData[] = [
   },
   {
     id: 2,
-    title: `
-    Asus Laptop X515MA BR091T Celeron N4020 4GB RAM 128gb Ssd 15.6" W10 Notebook
-    `,
-    price: 3099,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038185/125038185_1_MC/51440501.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038185/125038185_2_MC/51440500.jpg",
-    img3: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038185/125038185_4_MC/51440512.jpg",
-    img4: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038185/125038185_9_MC/51440498.jpg",
+    title: `Dell Vostro 3400 Intel Core I5 1135G7 32GB 1tb SSD MX330 Windows 10 Pro 14' Fhd Taşınabilir Bilgisayar`,
+    price: 10848,
+    img1: "https://productimages.hepsiburada.net/s/94/550/110000037365199.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/94/550/110000037365350.jpg/format:webp",
+    img3: "",
+    img4: "",
     amount: 1,
   },
   {
     id: 3,
     title: `
-    Acer A315-23 AMD Athlon 3050 4GB RAM 256GB SSD 15.6" W10 Notebook
+      Lenovo IdeaPad 3 AMD Ryzen 7 3700U 8GB 512GB SSD Freedos 15.6" FHD Taşınabilir Bilgisayar 81W10127TX
     `,
-    price: 3499,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037350/125037350_0_MC/49763592.png",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037350/125037350_1_MC/49763594.png",
-    img3: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037350/125037350_3_MC/49763600.png",
-    img4: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037350/125037350_4_MC/49763601.png",
+    price: 4999,
+    img1: "https://productimages.hepsiburada.net/s/80/550/110000022528448.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/80/550/110000022528449.jpg/format:webp",
+    img3: "https://productimages.hepsiburada.net/s/80/550/110000022529300.jpg/format:webp",
+    img4: "https://productimages.hepsiburada.net/s/80/550/110000022529301.jpg/format:webp",
     amount: 1,
   },
   {
     id: 4,
     title: `
-    Casper Nirvana X400.1035-8U00T-S-F i5-1035G1 8GB RAM 240 GB SSD 14" Notebook
+      Asus TUF FX506LI-HN085 Intel Core i5 10300H 8GB 1TB SSD GTX 1650Ti Freedos 15.6" FHD Taşınabilir Bilgisayar    
     `,
-    price: 6049,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037137/125037137_0_MC/53091758.png",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037137/125037137_1_MC/53091759.png",
-    img3: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037137/125037137_2_MC/53091760.png",
-    img4: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037137/125037137_3_MC/53091761.png",
+    price: 8198,
+    img1: "https://productimages.hepsiburada.net/s/70/550/110000011681313.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/70/550/110000011681314.jpg/format:webp",
+    img3: "https://productimages.hepsiburada.net/s/70/550/110000011681315.jpg/format:webp",
+    img4: "https://productimages.hepsiburada.net/s/70/550/110000011681316.jpg/format:webp",
     amount: 1,
   },
   {
     id: 5,
     title: `
-    Asus D515DA-BR027T Amd Ryzen5-3500u 8GB Ram 256GB SSD 15.6" W10 Notebook
+      Lenovo IdeaPad Gaming 3 AMD Ryzen 5 4600H 8GB 512GB SSD GTX 1650 Freedos 15.6" FHD Taşınabilir Bilgisayar 82EY00CGTX    
     `,
-    price: 5299,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038180/125038180_0_MC/51054343.png",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038180/125038180_1_MC/51054344.png",
-    img3: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038180/125038180_2_MC/51054345.png",
-    img4: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125038180/125038180_3_MC/51054346.png",
+    price: 7748,
+    img1: "https://productimages.hepsiburada.net/s/54/550/11171815620658.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/54/550/11171815653426.jpg/format:webp",
+    img3: "https://productimages.hepsiburada.net/s/54/550/11171815686194.jpg/format:webp",
+    img4: "https://productimages.hepsiburada.net/s/54/550/11171815718962.jpg/format:webp",
     amount: 1,
   },
   {
     id: 6,
     title: `
-    Casper Nirvana X500.1005-4W00E-G-F i3-1005G1 4GB RAM 120GB SSD 15,6" Notebook
+      HP Pavilion 15-DK0018NT Intel Core i7 9750H 16GB 1TB + 128GB SSD GTX1660Ti Freedos 15.6" FHD Taşınabilir Bilgisayar 8UF66EA
     `,
-    price: 4899,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037136/125037136_0_MC/51441714.png",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125037136/125037136_1_MC/51441718.png",
+    price: 9599,
+    img1: "https://productimages.hepsiburada.net/s/33/550/10422307487794.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/33/550/10422307520562.jpg",
     img3: "",
     img4: "",
     amount: 1,
@@ -83,11 +81,11 @@ const data: ItemData[] = [
   {
     id: 7,
     title: `
-    Preo My Sound MS15 Kulak Üstü Kablosuz Bluetooth Kulaklık Siyah
+      Samsung Galaxy S20 Plus 128 GB (Samsung Türkiye Garantili)    
     `,
-    price: 99.9,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262692/110262692_0_MC/28356744.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262692/110262692_2_MC/28356746.jpg",
+    price: 6899,
+    img1: "https://productimages.hepsiburada.net/s/35/550/10486575431730.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/35/550/10486575464498.jpg/format:webp",
     img3: "",
     img4: "",
     amount: 1,
@@ -95,11 +93,11 @@ const data: ItemData[] = [
   {
     id: 8,
     title: `
-    Preo My Sound MS23 Kulak İçi Kablolu 3.5mm Kulaklık Beyaz
+      iPhone 12 64 GB (24 Ay iPhone Türkiye Garantili)
     `,
-    price: 555,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/145059565/145059565_0_MC/38532940.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/145059565/145059565_1_MC/38532941.jpg",
+    price: 10299,
+    img1: "https://productimages.hepsiburada.net/s/76/550/110000018213470.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/76/550/110000018213471.jpg/format:webp",
     img3: "",
     img4: "",
     amount: 1,
@@ -107,11 +105,13 @@ const data: ItemData[] = [
   {
     id: 9,
     title: `
-    Preo My Sound Ms11 Kulak İçi Kulaklık Beyaz
+    
+iPhone 12 Pro Max 256 GB (24 Ay iPhone Türkiye Garantili)
+
     `,
-    price: 234,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262580/110262580_0_MC/28354288.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262580/110262580_1_MC/28354291.png",
+    price: 16999,
+    img1: "https://productimages.hepsiburada.net/s/66/550/110000007422583.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/66/550/110000007422584.jpg",
     img3: "",
     img4: "",
     amount: 1,
@@ -119,11 +119,11 @@ const data: ItemData[] = [
   {
     id: 10,
     title: `
-    Preo My Sound MS23 Kulak İçi Kablolu 3.5mm Kulaklık Siyah
+    Beats Solo3 Bluetooth Kablosuz Kulaküstü Kulaklık - Beats Pop Collection - Pop Blue MRRH2ZE/A
     `,
-    price: 122,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/145059566/145059566_0_MC/38686323.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/145059566/145059566_1_MC/38686324.jpg",
+    price: 1699,
+    img1: "https://productimages.hepsiburada.net/s/22/550/9971927187506.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/22/550/9971927220274.jpg/format:webp",
     img3: "",
     img4: "",
     amount: 1,
@@ -131,25 +131,25 @@ const data: ItemData[] = [
   {
     id: 11,
     title: `
-    Preo My Sound MS15 Kulak Üstü Kablosuz Bluetooth Kulaklık Kırmızı
+      Xiaomi Mi 10T Pro 256 GB (Xiaomi Türkiye Garantili)
     `,
-    price: 145,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262693/110262693_0_MC/28356697.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262693/110262693_1_MC/28356699.jpg",
-    img3: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262693/110262693_3_MC/28356706.jpg",
-    img4: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262693/110262693_4_MC/28356725.jpg",
+    price: 6335,
+    img1: "https://productimages.hepsiburada.net/s/48/550/10940071936050.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/48/550/10940071968818.jpg/format:webp",
+    img3: "https://productimages.hepsiburada.net/s/48/550/10940072001586.jpg/format:webp",
+    img4: "https://productimages.hepsiburada.net/s/48/550/10940072034354.jpg/format:webp",
     amount: 1,
   },
   {
     id: 12,
     title: `
-    Preo My Sound Ms11 Kulak İçi Kulaklık Siyah
+      Samsung Galaxy S21 5G 128 GB (Samsung Türkiye Garantili)
     `,
-    price: 37,
-    img1: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262578/110262578_0_MC/28354343.jpg",
-    img2: "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/110262578/110262578_1_MC/28354348.png",
-    img3: "",
-    img4: "",
+    price: 8099,
+    img1: "https://productimages.hepsiburada.net/s/54/550/11186104270898.jpg/format:webp",
+    img2: "https://productimages.hepsiburada.net/s/54/550/11186104336434.jpg/format:webp",
+    img3: "https://productimages.hepsiburada.net/s/54/550/11186104401970.jpg/format:webp",
+    img4: "https://productimages.hepsiburada.net/s/54/550/11186104533042.jpg/format:webp",
     amount: 1,
   },
 ];

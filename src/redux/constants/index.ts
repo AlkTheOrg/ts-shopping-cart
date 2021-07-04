@@ -6,6 +6,7 @@ const Constants = {
   DEL_FROM_CART: "DEL_FROM_CART",
   INCREASE_IN_CART: "INCREASE_IN_CART",
   DECREASE_IN_CART: "DECREASE_IN_CART",
+  SET_SEARCH_TERM: "SET_SEARCH_TERM",
 };
 
 export default Constants;

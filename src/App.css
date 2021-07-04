@@ -1,5 +1,5 @@
 :root {
-  --independence: #555B6E;
+  --independence: #555b6e;
   --morning-blue: #89b0ae;
   --powder-blue: #e3bed8;
   --cultured: #faf9f9;
@@ -7,13 +7,20 @@
   --apricot-darker: #fc9d5e;
 }
 
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, aside, div {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+aside,
+div {
   background: none;
 }
 
@@ -41,11 +48,11 @@ body {
 #navbar a {
   text-decoration: none;
   background: none;
-  transition: .125s;
+  transition: 0.125s;
 }
 
 #navbar a:hover {
-  filter: brightness(1.2)
+  filter: brightness(1.2);
 }
 
 .nav-item {
@@ -57,7 +64,7 @@ body {
   display: inline-block;
   background: none;
   font-size: 36px;
-  color: var(--apricot-darker)
+  color: var(--apricot-darker);
 }
 
 /**************
@@ -154,7 +161,6 @@ body {
 .items-list li {
   list-style: none;
   flex: 0 0 33.333333%;
-  border: 2px green solid;
 }
 
 /**************
@@ -166,9 +172,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 15px;
-  background-color: rgba(110, 10, 110, .1);
   height: 100%;
-
 }
 
 .item {
@@ -181,7 +185,6 @@ body {
 
 .item-body {
   /* height: 100%; */
-  background-color: red;
 }
 
 .item a {
@@ -200,6 +203,10 @@ body {
 
 .item img {
   width: 95%;
+}
+
+.blend-white-bg-img {
+  mix-blend-mode: multiply;
 }
 
 /**************
@@ -241,7 +248,7 @@ button {
   background: #2680c0;
   color: var(--cultured);
   cursor: pointer;
-  transition: .125s;
+  transition: 0.125s;
   border-radius: 12%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: inline-block;
@@ -266,7 +273,7 @@ button {
   border-bottom: 1px solid black;
 }
 
-.cart-item img{
+.cart-item img {
   width: 50%;
 }
 
@@ -280,12 +287,12 @@ button {
   margin: 0 auto;
 }
 
-.cart-item h3{
+.cart-item h3 {
   padding: 12px;
   font-size: 18px;
 }
 
-.cart-item-hero h4{
+.cart-item-hero h4 {
   margin-top: 12px;
   font-size: 22px;
 }
@@ -313,7 +320,6 @@ button {
 
 .item-show {
   width: 100%;
-  
 }
 
 .item-show h2 {
@@ -329,7 +335,7 @@ button {
   overflow: hidden;
 }
 
-.item-image-container button{
+.item-image-container button {
   position: absolute;
   /* background-color: #c08226; */
   background: none;
@@ -339,11 +345,11 @@ button {
   width: 44px;
 }
 
-.item-image-container img{
+.item-image-container img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: .5s;
+  transition: 0.5s;
   height: 90%;
 }
 
@@ -361,7 +367,7 @@ button {
 
 .item-image-container .shift-left {
   top: 50%;
-  left:0;
+  left: 0;
   margin-left: 18px;
   transform: translateY(-50%);
 }
@@ -369,6 +375,6 @@ button {
 .item-image-container .shift-right {
   top: 50%;
   transform: translateY(-50%);
-  right:0;
+  right: 0;
   margin-right: 18px;
 }

@@ -6,7 +6,11 @@ import App from "./App";
 import headReducer from "./redux/reducers";
 import Router from "./Router";
 
-const store = createStore(headReducer);
+const store = createStore(
+  headReducer,
+  (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
+    (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <React.StrictMode>

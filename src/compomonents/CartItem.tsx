@@ -24,7 +24,7 @@ const CartItem: FC<Props> = ({
     <div className="cart-item">
       <h3>{title}</h3>
       <div className="cart-item-body">
-        <img src={img1} alt="cart-item" />
+        <img src={img1} alt="cart-item" className="blend-white-bg-img" />
         <div className="cart-item-hero">
           <div className="cart-item-amount">
             <button
