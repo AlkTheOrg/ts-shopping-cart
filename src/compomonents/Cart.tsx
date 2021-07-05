@@ -4,6 +4,7 @@ import { ItemData } from "../data";
 import { RootState } from "../redux/constants/type";
 import CartItem from "./CartItem";
 import * as Actions from "../redux/actions/index";
+import { Slide } from "react-awesome-reveal";
 
 interface Props {
   cart: ItemData[];
@@ -38,17 +39,19 @@ const Cart: FC<Props> = ({ cart }): JSX.Element => {
     <aside className="Cart">
       <div className="Cart-inside">
         <h1>Cart</h1>
-        {cart.map((item: ItemData) => {
-          return (
-            <CartItem
-              key={item.id}
-              {...item}
-              decreaseInCart={() => decreaseInCart(item)}
-              increaseInCart={() => increaseInCart(item)}
-              deleteFromCart={() => deleteFromCart(item)}
-            />
-          );
-        })}
+        <Slide direction="right" triggerOnce={true}>
+          {cart.map((item: ItemData) => {
+            return (
+              <CartItem
+                key={item.id}
+                {...item}
+                decreaseInCart={() => decreaseInCart(item)}
+                increaseInCart={() => increaseInCart(item)}
+                deleteFromCart={() => deleteFromCart(item)}
+              />
+            );
+          })}
+        </Slide>
         <h2 className="total-cost">{totalCost} TL</h2>
         <button className="proceed">PROCEED</button>
       </div>

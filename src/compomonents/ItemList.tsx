@@ -4,6 +4,7 @@ import { ItemData } from "../data";
 import { RootState } from "../redux/constants/type";
 import Item from "./Item";
 import * as Actions from "../redux/actions/index";
+import { Fade } from "react-awesome-reveal";
 
 interface Props {
   items: ItemData[];
@@ -20,20 +21,22 @@ const ItemList: FC<Props> = ({ items }) => {
   const increase = (item: ItemData) => dispatch(Actions.increaseInList(item));
   const decrease = (item: ItemData) => dispatch(Actions.decreaseInList(item));
   return (
-    <ul className="items-list">
-      {items.map((item) => {
-        return (
-          <li key={item.id}>
-            <Item
-              {...item}
-              addToCart={() => addToCart(item)}
-              increase={() => increase(item)}
-              decrease={() => decrease(item)}
-            />
-          </li>
-        );
-      })}
-    </ul>
+    <Fade duration={500} triggerOnce={true}>
+      <ul className="items-list">
+        {items.map((item) => {
+          return (
+            <li key={item.id}>
+              <Item
+                {...item}
+                addToCart={() => addToCart(item)}
+                increase={() => increase(item)}
+                decrease={() => decrease(item)}
+              />
+            </li>
+          );
+        })}
+      </ul>
+    </Fade>
   );
 };
 

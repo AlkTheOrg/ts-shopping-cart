@@ -67,6 +67,21 @@ body {
   color: var(--apricot-darker);
 }
 
+/************
+SEARCHBAR
+*************/
+#search-input {
+  border-radius: 5px;
+  width: 256px;
+  height: 28px;
+  font-size: 14px;
+  border: 0.5px solid #851c1c;
+}
+
+#search-input:focus {
+  border-color: #5bade7;
+}
+
 /**************
       APP
 **************/
@@ -89,6 +104,7 @@ body {
 
 .Cart-inside {
   /* background-color: green; */
+  overflow: hidden;
   background-color: rgba(182, 222, 255, 0.425);
   border: 1px solid rgba(0, 0, 0, 0.205);
   border-radius: 5px;
@@ -138,9 +154,9 @@ body {
 }
 
 .SearchBar label {
-  font-size: 24px;
+  font-size: 18px;
   margin: 4px;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .SearchBar input {
