@@ -35,13 +35,13 @@ const ItemShow: React.FC = () => {
         <div className="item-image-container">
           <h2>{title}</h2>
           <img className="img-at-center" src={images[0]} alt={title + 1} />
-          {images[2] ? (
+          {images[1] ? (
             <img className="img-at-right" src={images[1]} alt={title + 2} />
           ) : null}
-          {images[3] ? (
+          {images[2] ? (
             <img className="img-at-right" src={images[2]} alt={title + 3} />
           ) : null}
-          {images[4] ? (
+          {images[3] ? (
             <img className="img-at-left" src={images[3]} alt={title + 4} />
           ) : null}
           <button onClick={shiftLeft} className="shift-left">
