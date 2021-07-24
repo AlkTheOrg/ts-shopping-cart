@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ItemListAction } from "../redux/constants/type";
 
-interface Props {
+export interface Props {
   id: number;
   title: string;
   price: number;

@@ -7,13 +7,13 @@ export function getByTextContent(textMatch: string | RegExp): HTMLElement {
       node.textContent === textMatch || node.textContent?.match(textMatch);
     const nodeHasText = hasText(node as Element);
     // console.log(node?.tagName, node.classList.toString(), nodeHasText);
-    
+
     // asserting that only one element has the textMatch we are looking for
     const childrenDontHaveText = Array.from(node?.children || []).every(
       (child) => !hasText(child)
     );
-    console.log(childrenDontHaveText)
-    return nodeHasText && childrenDontHaveText || false;
+    // console.log(childrenDontHaveText)
+    return (nodeHasText && childrenDontHaveText) || false;
   });
 }
 
@@ -27,6 +27,6 @@ export async function findByTextContent(
     const childrenDontHaveText = Array.from(node?.children || []).every(
       (child) => !hasText(child)
     );
-    return nodeHasText && childrenDontHaveText || false;
+    return (nodeHasText && childrenDontHaveText) || false;
   });
 }
